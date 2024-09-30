@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "893c84f3-d826-4a6f-9843-1e4bd561a20a",
+		"name": "Candidate Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31406321"
+	},
+	"item": [
+		{
+			"name": "Create new candidate with dynamic data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en;q=0.9,en-US;q=0.8"
+					},
+					{
+						"key": "cookie",
+						"value": "orangehrm=82a6d3bb33da1afea63976c14871d54b"
+					},
+					{
+						"key": "referer",
+						"value": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Microsoft Edge\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \"{{firstName}}\",\r\n        \"middleName\": \"{{middleName}}\",\r\n        \"lastName\": \"{{lastName}}\",\r\n        \"email\": \"{{email}}\",\r\n        \"contactNumber\": \"{{contactNumber}}\",\r\n        \"comment\": \"{{comment}}\",\r\n        \"keywords\": \"{{keywords}}\",\r\n        \"dateOfApplication\": \"{{dateOfApplication}}\",\r\n        \"consentToKeepData\": \"{{consentToKeepData}}\"\r\n    }\r\n \r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/recruitment/candidates",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"web",
+						"index.php",
+						"api",
+						"v2",
+						"recruitment",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new candidate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"firstName\", firstName);\r",
+							"pm.environment.set(\"middleName\", middleName);\r",
+							"pm.environment.set(\"lastName\", lastName);\r",
+							"pm.environment.set(\"email\", email);\r",
+							"pm.environment.set(\"contactNumber\", contactNumber);\r",
+							"pm.environment.set(\"comment\", comment);\r",
+							"pm.environment.set(\"keywords\", keywords);\r",
+							"pm.environment.set(\"dateOfApplication\", dateOfApplication);\r",
+							"pm.environment.set(\"consentToKeepData\", consentToKeepData);\r",
+							"var list = pm.info.iterationCount;\r",
+							"console.log(list);\r",
+							"pm.environment.set(\"totalRecords\", list);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en;q=0.9,en-US;q=0.8"
+					},
+					{
+						"key": "cookie",
+						"value": "orangehrm=1c325161d2bb163881e9c4e4f1183c99"
+					},
+					{
+						"key": "referer",
+						"value": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Microsoft Edge\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " \r\n   \r\n {\r\n        \"firstName\": \"Nesma1\",\r\n        \"middleName\": \"Adel1\",\r\n        \"lastName\": \"aaaa1\",\r\n        \"email\": \"nesma1.a@mail.com\",\r\n        \"contactNumber\": \"01287364541\",\r\n        \"comment\": \"note11\",\r\n        \"keywords\": \"keywords1\",\r\n        \"dateOfApplication\": \"2024-04-01\",\r\n        \"consentToKeepData\": true\r\n    }\r\n    //,\r\n    //  {\r\n    //     \"firstName\": \"Nesma2\",\r\n    //     \"middleName\": \"Adel\",\r\n    //     \"lastName\": \"aaaa\",\r\n    //     \"email\": \"nesma2.a@mail.com\",\r\n    //     \"contactNumber\": \"01287364547\",\r\n    //     \"comment\": \"note\",\r\n    //     \"keywords\": \"keywords\",\r\n    //     \"dateOfApplication\": \"2024-04-01\",\r\n    //     \"consentToKeepData\": true\r\n    // }\r\n \r\n \r\n\r\n   \r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/recruitment/candidates",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"web",
+						"index.php",
+						"api",
+						"v2",
+						"recruitment",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

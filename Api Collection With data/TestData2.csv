@@ -1,0 +1,3 @@
+firstName,middleName,lastName,email,contactNumber,comment,keywords,dateOfApplication,consentToKeepData
+Nesma1,Adel1,Abd-Elhamid1,nesma1.a@mail.com,01234567890,note1,keywords,2024-04-01,true
+Nesma2,Adel2,Abd-Elhamid2,nesma2.a@mail.com,01234567892,note2,keywords2,2024-04-01,true

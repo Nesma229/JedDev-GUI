@@ -1,0 +1,24 @@
+[
+    {
+        "firstName": "Nesma1",
+        "middleName": "Adel1",
+        "lastName": "Abd-Elhamid1",
+        "email": "nesma1.a@mail.com",
+        "contactNumber": "01234567890",
+        "comment": "note1",
+        "keywords": "keywords",
+        "dateOfApplication": "2024-04-02",
+        "consentToKeepData": "true"
+    },
+    {
+        "firstName": "Nesma2",
+        "middleName": "Adel2",
+        "lastName": "Abd-Elhamid2",
+        "email": "nesma2.a@mail.com",
+        "contactNumber": "01234567892",
+        "comment": "note2",
+        "keywords": "keywords2",
+        "dateOfApplication": "2024-04-02",
+        "consentToKeepData": "true"
+    }
+]
